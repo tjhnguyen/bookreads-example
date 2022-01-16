@@ -1,14 +1,3 @@
-.top-nav {
-    height: 56px;
-    padding: 12px 64px;
-    border-bottom: solid 1px #aaa;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    background-color: #F4F1EA;
-    grid-area: header;
-}
-
 .top-nav h1 {
     font-size: 24px;
     color: #444;
@@ -39,4 +28,66 @@
 .profile {
     display: inline-block;
     margin-left: auto;
+}
+
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    background-color: rgba(244,241,234,0.5);
+    display: grid;
+    grid-template-rows: 56px 1fr;
+    grid-template-columns: 270px 1fr;
+    grid-template-areas: "header header"
+                         "sidebar content";
+}
+
+.top-nav {
+  height: 56px;
+    padding: 12px 64px;
+    border-bottom: solid 1px #aaa;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #F4F1EA;
+    grid-area: header;
+}
+
+.user-activity {
+    grid-area: sidebar;
+}
+
+.page-content {
+    grid-area: content;
+}
+
+.reading-challenge {
+    padding: 8px;
+}
+
+.currently-reading section img {
+    max-height: 100%;
+    width: 120px;
+    margin-right: 8px;
+}
+
+.currently-reading section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    border-bottom: solid 1px #aaa;
+    height: 200px;
+    padding: 8px;
+}
+
+.user-activity {
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px #aaa;
+    background-color: white;
+    grid-area: sidebar;
+}
+
+.user-activity > header {
+    border-bottom: solid 1px #aaa;
+    padding: 8px;
 }
